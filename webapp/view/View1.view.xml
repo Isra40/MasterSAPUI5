@@ -1,0 +1,26 @@
+<mvc:View
+    controllerName="logali.sapui5.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Button
+                id='btnHello'
+                text="{i18n>showHelloButtonText}"
+                press=".onShowHello"
+            />
+            <Input
+                id="txtHello"
+                value="{myModel>/inputData/value}"
+                description="Hello {myModel>/inputData/value}"
+                valueLiveUpdate="true"
+                width="60%"
+            />
+        </content>
+    </Page>
+</mvc:View>
