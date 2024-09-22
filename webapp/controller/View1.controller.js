@@ -1,3 +1,4 @@
+// @ts-nocheck
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/m/MessageToast",
@@ -8,7 +9,9 @@ sap.ui.define([
  * 
  * @param {typeof sap.ui.core.mvc.Controller} Controller 
  * @param {typeof sap.m.MessageToast} MessageToast 
-  * @returns 
+ * @param {*} models 
+ * @param {sap.ui.model.resource.ResourceModel} ResourceModel 
+ * @returns 
  */
     function (Controller, MessageToast, models, ResourceModel) {
         "use strict";
