@@ -1,6 +1,7 @@
 <mvc:View
     controllerName="logali.sapui5.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
     displayBlock="true"
     xmlns="sap.m"
 >
@@ -32,7 +33,8 @@
                     text="Hello {myModel>/inputData/value}"
                     class="sapUiSmallMargin boldElements "
                 />                
-			</Panel>                
+			</Panel> 
+            <core:Fragment fragmentName="logali.sapui5.view.Form01" type="XML" />             
         </content>
     </Page>
 </mvc:View>

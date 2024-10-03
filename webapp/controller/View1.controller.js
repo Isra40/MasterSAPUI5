@@ -32,12 +32,22 @@ sap.ui.define([
                 var oModel = this.getOwnerComponent().getModel("myModel");
                 var aInputData = oModel.getProperty("/inputData");
 
-                var oBundle = this.getView().getModel("i18n").getResourceBundle();
+                // var oBundle = this.getView().getModel("i18n").getResourceBundle();
                 
-                var vTextValue = aInputData.value;
-                var sMsg = oBundle.getText("helloMsg", [vTextValue] );
+                 var vTextValue = aInputData.value;
+                // var sMsg = oBundle.getText("helloMsg", [vTextValue] );
 
-                MessageToast.show(sMsg);
-            }
+                // MessageToast.show(sMsg);
+
+                let oResourceBoundle = this.getView()?.getModel("i18n")?.getResourceBundle();
+                const sMsg = oResourceBoundle.getText("helloMsg", [vTextValue] );
+                MessageToast.show(oResourceBoundle.getText(sMsg));   
+            },
+
+            onCloseDialog: function() {
+                // note: We don't need to chain to the pDialog promise, since this event handler
+                // is only called from within the loaded dialog itself.
+                MessageToast.show("HEllo");
+            }            
         });
     });
