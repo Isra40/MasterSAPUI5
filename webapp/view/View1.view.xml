@@ -14,7 +14,13 @@
                 id = "idPanel"
                 headerText="{i18n>helloPanel}"
                 class="sapUiResponsiveMargin"
-                width="auto">        
+                width="auto">  
+                <Button 
+                    id='btnDHello'
+                    press=".onOpenDialog"
+                    class="sapUiSmallMarginEnd"                   
+                    icon="sap-icon://action"
+                />      
                 <Button
                     id='btnHello'
                     text="{i18n>showHelloButtonText}"
