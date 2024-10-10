@@ -1,9 +1,12 @@
 <mvc:View controllerName="com.logaligroup.invoices.controller.Main"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+     xmlns="sap.m"
+     xmlns:mvc="sap.ui.core.mvc">
+     
     <Page id="page" title="{i18n>title}">
-       <Panel id="panel">
-            <Button id="btnButton" text="{i18n>buttonText}" type="Accept" press="onShowMessage"></Button>
-       </Panel>
+        <content>
+            <mvc:XMLView id="HelloPanel" 
+                         viewName="com.logaligroup.invoices.view.HelloPanel"
+                         type="XML"/>
+        </content>
     </Page>
 </mvc:View>
